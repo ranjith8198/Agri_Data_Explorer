@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Load the data
-df = pd.read_csv('agri_uncleaned_data.csv')
+df = pd.read_csv('Data/agri_uncleaned_data.csv')
 
 # 1. Formatting Names (Consistency)
 df.columns = df.columns.str.strip().str.lower().str.replace(" ", "_")
@@ -23,11 +23,11 @@ df = df.replace([-99, -1, -999, -99.0, -1.0], 0)
 
 # 4. Math Correction
 # Note: Since names are now clean, we check the original columns for the 1000 multiplier
-raw_cols = pd.read_csv('agri_uncleaned_data.csv', nrows=0).columns
+raw_cols = pd.read_csv('Data/agri_uncleaned_data.csv', nrows=0).columns
 for raw_col, clean_col in zip(raw_cols, df.columns):
     if '1000' in raw_col:
         df[clean_col] = df[clean_col] * 1000
 
 # 5. Saving result
-df.to_csv('agri_cleaned_data.csv', index=False)
+df.to_csv('Data/agri_cleaned_data.csv', index=False)
 print("Project Cleaning Complete ")
