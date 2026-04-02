@@ -3,7 +3,7 @@
 
 📌 Project Description
 
-Agri_Data_Explorer is a comprehensive data engineering and analytics project that tracks the evolution of Indian agriculture from 1960 to 2025.
+Agri_Data_Explorer is a comprehensive data engineering and analytics project that tracks the evolution of Indian agriculture 
 The system utilizes Python for automated ETL (Extract, Transform, Load) processes, SQL for complex querying, and Power BI for geospatial and temporal visualizations. It provides deep insights into crop yield, production shifts, and regional agricultural dominance over six decades.
 
 🛠️ Technologies Used
